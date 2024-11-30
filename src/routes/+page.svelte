@@ -29,7 +29,7 @@
 
 	function onTick(seconds: number) {
 		if (seconds === 3) {
-			goto('./game');
+			goto('/game');
 		}
 	}
 
