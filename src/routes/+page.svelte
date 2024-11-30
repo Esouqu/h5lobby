@@ -24,12 +24,13 @@
 	import ChatInput from '$lib/components/ChatInput.svelte';
 	import Settings from '$lib/components/settings/Settings.svelte';
 	import Spinner from '$lib/components/Spinner.svelte';
+	import { base } from '$app/paths';
 
 	let searchState = $state(SearchState.Idle);
 
 	function onTick(seconds: number) {
 		if (seconds === 3) {
-			goto('/game');
+			goto(`${base}/game`);
 		}
 	}
 

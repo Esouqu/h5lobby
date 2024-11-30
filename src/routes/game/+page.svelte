@@ -10,6 +10,7 @@
 	import HeroDraft from '$lib/components/HeroDraft.svelte';
 	import { onMount } from 'svelte';
 	import Spinner from '$lib/components/Spinner.svelte';
+	import { base } from '$app/paths';
 
 	const users: (IUser & { color?: string })[] = [
 		{
@@ -94,7 +95,7 @@
 			>
 				Запустить игру
 			</Button>
-			<Button size="sm" variant="ghost" onclick={() => goto('/')}>Отменить партию</Button>
+			<Button size="sm" variant="ghost" onclick={() => goto(`${base}/`)}>Отменить партию</Button>
 		</div>
 	</div>
 	<div class=" flex w-[20rem] flex-col justify-between pb-1 pt-4">
